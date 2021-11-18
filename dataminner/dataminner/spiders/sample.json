@@ -1,0 +1,83 @@
+{
+    "property_id": "Bayut - JVC-JD-PLAZA-1BR",
+    "purpose": "For Rent",
+    "type_": "Apartment",
+    "added_on": "September 12, 2021",
+    "furnishing": "Unfurnished",
+    "price": {
+        "currency": "AED",
+        "amount": "42,000"
+    },
+    "location": "The Plaza Residences, Jumeirah Village Circle (JVC), Dubai",
+    "bed_bath_size": {
+        "bedrooms": "1",
+        "bathrooms": "2",
+        "size": "1,023 sqft"
+    },
+    "permit_number": "7151945107",
+    "agent_name": "Justan David",
+    "img_url": "https://images.bayut.com/thumbnails/96346843-240x180.jpeg",
+    "breadcrumbs": "Spacious layout | Unique Design | Best location",
+    "amenities": [
+        "Balcony or Terrace",
+        "Parking Spaces",
+        ": 1",
+        "Swimming Pool",
+        "Centrally Air-Conditioned",
+        "Lobby in Building",
+        "Prayer Room",
+        "Reception/Waiting Room",
+        "Gym or Health Club",
+        "Barbeque Area",
+        "Waste Disposal",
+        "Maintenance Staff",
+        "Security Staff",
+        "CCTV Security",
+        "Broadband Internet",
+        "Satellite/Cable TV",
+        "Intercom",
+        "24 Hours Concierge"
+    ],
+    "description": "Azco Real Estate Brokers (LLC) is proud to offer you this astonishing and elegantly designed apartment located in the most sought-after residential community in Dubai, Jumeirah Village Circle. "
+}{
+    "property_id": "Bayut - JVC-HK-RIG-1BR",
+    "purpose": "For Rent",
+    "type_": "Apartment",
+    "added_on": "October 19, 2021",
+    "furnishing": "Unfurnished",
+    "price": {
+        "currency": "AED",
+        "amount": "65,000"
+    },
+    "location": "Rigel Apartments, Jumeirah Village Circle (JVC), Dubai",
+    "bed_bath_size": {
+        "bedrooms": "1",
+        "bathrooms": "2",
+        "size": "755 sqft"
+    },
+    "permit_number": "71281229197",
+    "agent_name": "Hassan Khalid",
+    "img_url": "https://images.bayut.com/thumbnails/96346843-240x180.jpeg",
+    "breadcrumbs": "Fully Furnished | Modern amenities | High quality",
+    "amenities": [
+        "Furnished",
+        "Balcony or Terrace",
+        "Parking Spaces",
+        ": 1",
+        "Swimming Pool",
+        "Sauna",
+        "Steam Room",
+        "Centrally Air-Conditioned",
+        "Lobby in Building",
+        "Reception/Waiting Room",
+        "Gym or Health Club",
+        "Kids Play Area",
+        "Barbeque Area",
+        "Waste Disposal",
+        "Maintenance Staff",
+        "Security Staff",
+        "CCTV Security",
+        "24 Hours Concierge"
+    ],
+    "description": "Azco Real Estate Brokers (LLC) is proud to present this desirable and ideal place to live in Dubai, Jumeirah Village Circle. "
+}
