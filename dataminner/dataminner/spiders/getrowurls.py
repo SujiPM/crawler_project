@@ -4,7 +4,7 @@ import scrapy
 from scrapy.loader import ItemLoader
 
 
-class project(scrapy.Spider):
+class getrowurls(scrapy.Spider):
     # name = 'project'
     # start_urls = ['https://www.bayut.com/property/details-5382212.html']
 
@@ -61,6 +61,7 @@ class project(scrapy.Spider):
             self.rows=self.rows+1 
             if self.rows == 1010:
                self.workbook.close()
+
             
         
         # if self.flow =="row":  
