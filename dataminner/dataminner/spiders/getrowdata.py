@@ -68,7 +68,7 @@ class getrowdata(scrapy.Spider):
         
         # print(self.start_urls)
         # print(cell_obj.value)
-        for i in range(1,1009):
+        for i in range(1,1000):
             cell_obj = sheet_obj.cell(row = i, column = 1)
             yield scrapy.Request(self.start_urls+str(cell_obj.value))
             print("file written :" ,i)
@@ -82,10 +82,21 @@ class getrowdata(scrapy.Spider):
         self.currency_type=response.xpath('/html/body/div[1]/main/div[3]/div[1]/div[2]/div[1]/div[1]/div/span[1]/text()').get()
         self.currency_amount=response.xpath('/html/body/div[1]/main/div[3]/div[1]/div[2]/div[1]/div[1]/div/span[3]/text()').get()
         self.location=response.xpath('/html/body/div[1]/main/div[3]/div[1]/div[2]/div[2]/text()').get()
-        self.bedrooms=re.findall(r'\d+',response.xpath('/html/body/div[1]/main/div[3]/div[1]/div[2]/div[3]/div[1]/span[2]/span/text()').get())[0]
-        self.bathrooms=re.findall(r'\d+',response.xpath('/html/body/div[1]/main/div[3]/div[1]/div[2]/div[3]/div[2]/span[2]/span/text()').get())[0]
+        try:
+           self.bedrooms=re.findall(r'\d+',response.xpath('/html/body/div[1]/main/div[3]/div[1]/div[2]/div[3]/div[1]/span[2]/span/text()').get())[0]
+        except:
+            self.bedrooms="0"
+        try:    
+            self.bathrooms=re.findall(r'\d+',response.xpath('/html/body/div[1]/main/div[3]/div[1]/div[2]/div[3]/div[2]/span[2]/span/text()').get())[0]
+        except:
+            self.bathrooms="0"
+
         self.size=response.xpath('/html/body/div[1]/main/div[3]/div[1]/div[2]/div[3]/div[3]/span[2]/span/span/text()').get()
-        self.permit_number=response.xpath('/html/body/div[1]/main/div[3]/div[2]/div[1]/div[1]/div/div[2]/span[2]/text()').getall()[2]
+        try:
+           self.permit_number=response.xpath('/html/body/div[1]/main/div[3]/div[2]/div[1]/div[1]/div/div[2]/span[2]/text()').getall()[2]
+        except:
+            self.permit_number="null"
+
         self.agent_name=response.xpath('/html/body/div[1]/main/div[3]/div[2]/div[1]/div[1]/div/div[3]/span[2]/text()').get()
         self.img_url=response.xpath("//picture[@class='_219b7e0a']/img/@data-src").extract()[0]
         self.breadcrumbs=response.xpath('/html/body/div[1]/main/div[3]/div[1]/div[4]/div/h1/text()').get()
