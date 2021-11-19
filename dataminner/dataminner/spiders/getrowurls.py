@@ -5,7 +5,8 @@ from scrapy.loader import ItemLoader
 
 
 class getrowurls(scrapy.Spider):
-    # name = 'project'
+    # 
+    # name = 'getrowurls'
     # start_urls = ['https://www.bayut.com/property/details-5382212.html']
 
     # def parse(self, response):
@@ -39,6 +40,9 @@ class getrowurls(scrapy.Spider):
         self.workbook = xlsxwriter.Workbook('urls.xlsx')
         self.worksheet = self.workbook.add_worksheet()
         for i in range(1,50):
+            # this is going to loop for 50 time
+            # used for looping the given range of values
+            # also to print some value
             
             if i == 1:
                 yield scrapy.Request(self.start_urls)
