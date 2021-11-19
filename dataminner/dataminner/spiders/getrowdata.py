@@ -10,6 +10,7 @@ from scrapy.loader import ItemLoader
 
 
 class getrowdata(scrapy.Spider):
+     # class getrowdata to get
      name = 'getrowdata'
      path = r"C:\\Users\\SUJI\\Desktop\\crawler_project\\dataminner\\dataminner\\spiders\\urls.xlsx"
      property_id="null"
@@ -31,7 +32,10 @@ class getrowdata(scrapy.Spider):
      breadcrumbs="null"
      amenities="null"
      description="null"
+
      def createdictionary(self):
+         # function creditdictionary to get properties
+
         dictionary ={
             "property_id" : self.property_id,
             "purpose": self.purpose,
@@ -62,17 +66,24 @@ class getrowdata(scrapy.Spider):
      
 
      start_urls = 'https://www.bayut.com'
+     
      def start_requests(self):
+        # function start_request to get
         wb_obj = openpyxl.load_workbook(self.path)
         sheet_obj = wb_obj.active
         
         # print(self.start_urls)
         # print(cell_obj.value)
         for i in range(1,1009):
+            # this is going to loop for 1009 time
+            # used for looping the given range of values
+            # also to print some value
             cell_obj = sheet_obj.cell(row = i, column = 1)
             yield scrapy.Request(self.start_urls+str(cell_obj.value))
             print("file written :" ,i)
-     def parse(self,response):   
+
+     def parse(self,response):  
+        # parse function to get
         print(response.xpath('/html/body/div[1]/main/div[3]/div[1]/div[4]/div/div[2]/ul/li[2]/span[2]/text()').get())
         self.property_id=response.xpath('/html/body/div[1]/main/div[3]/div[1]/div[4]/div/div[2]/ul/li[3]/span[2]/text()').get()
         self.purpose=response.xpath('/html/body/div[1]/main/div[3]/div[1]/div[4]/div/div[2]/ul/li[2]/span[2]/text()').get()
